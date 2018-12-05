@@ -1,6 +1,3 @@
-// Place all the styles related to the home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
 /* reset ================================ */
 * {
     box-sizing: border-box;
@@ -130,6 +127,8 @@
     background-repeat: no-repeat;
     background-position: center 50%;
     background-size: cover;
+    /* 背景画像のCSSを追加してください */
+    background-image: url("/top.jpg");
   }
   
   .top-message {
@@ -240,3 +239,4 @@
     border-radius: 0 0 2px 2px;
     font-size: 14px;
   }
+  
