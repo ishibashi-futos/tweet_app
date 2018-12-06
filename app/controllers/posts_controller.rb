@@ -17,8 +17,15 @@ class PostsController < ApplicationController
   end
   
   def edit
-    # 変数@postを定義してください
     @post = Post.find_by(id: params[:id])
+  end
+  
+  def update
+    # updateアクションの中身を作成してください
+    @post = Post.find_by(id: params[:id])
+    @post.content = params[:content]
+    @post.save
+    redirect_to("/posts/index")
   end
   
 end
