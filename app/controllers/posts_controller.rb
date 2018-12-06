@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.all
+    # Post.allにorderメソッドを用いて、新しい投稿が上から順に表示されるようにしてください
+    @posts = Post.all.order(created_at: :desc)
   end
   
   def show
@@ -11,8 +12,7 @@ class PostsController < ApplicationController
   end
   
   def create
-    # フォームから送信されたデータを受け取り、保存する処理を追加してください
-    @post = Post.new(content:params[:content])
+    @post = Post.new(content: params[:content])
     @post.save
     redirect_to("/posts/index")
   end
