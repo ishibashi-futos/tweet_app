@@ -21,10 +21,17 @@ class PostsController < ApplicationController
   end
   
   def update
-    # updateアクションの中身を作成してください
     @post = Post.find_by(id: params[:id])
     @post.content = params[:content]
     @post.save
+    redirect_to("/posts/index")
+  end
+  
+  def destroy
+    # destroyアクションの中身を作成してください
+    @post = Post.find_by(id: params[:id])
+    @post.destroy
+    
     redirect_to("/posts/index")
   end
   
