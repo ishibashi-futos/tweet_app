@@ -16,8 +16,9 @@ class PostsController < ApplicationController
     redirect_to("/posts/index")
   end
   
-  # editアクションを追加してください
   def edit
+    # 変数@postを定義してください
+    @post = Post.find_by(id: params[:id])
   end
-
+  
 end
