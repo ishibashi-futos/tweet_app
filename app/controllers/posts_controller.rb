@@ -3,7 +3,8 @@ class PostsController < ApplicationController
     @posts = Post.all
   end
   
-  # showアクションを追加してください
   def show
+    # 変数paramsから「:id」の値を取得し、変数@idに代入してください
+    @id = params[:id]
   end
 end
