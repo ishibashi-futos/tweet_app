@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   end
   
   def show
-    # 変数paramsから「:id」の値を取得し、変数@idに代入してください
-    @id = params[:id]
+    # find_byを用いてpostsテーブルから「params[:id]」に対応するデータを取り出し、変数@postに代入してください
+    @post = Post.find_by(id:params[:id])
   end
 end
