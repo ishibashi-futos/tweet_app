@@ -7,5 +7,9 @@ class User < ApplicationRecord
     uniqueness: true,
     presence: true
   }
+  # passwordカラムにバリデーションを設定してください
+  validates :password, {
+    presence: true
+  }
   
 end
