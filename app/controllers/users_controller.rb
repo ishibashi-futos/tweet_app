@@ -82,7 +82,7 @@ class UsersController < ApplicationController
     @user = User.find_by(id: params[:id])
     
     # 変数@likesを定義してください
-    @likes = Like.where(user_id : @user.id)
+    @likes = Like.where(user_id: @user.id)
     
   end
   
